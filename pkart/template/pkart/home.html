@@ -42,7 +42,15 @@
 
             <p id = "rl{{product.product_number}}" class="card-text" onclick="expand({{product.product_number}})" style="cursor:pointer">{{product.product_description}}</p>
             <span class="text-secondary" id = "sl{{product.product_number}}"onclick="contract({{product.product_number}})" style="display: none;cursor:pointer">show less</span>
-        <a href="/pkart/checkout/{{product.product_number}}" class="btn btn-primary">Buy now</a>
+          <div class="row">
+            <div class="col">
+              <a href="/pkart/checkout/{{product.product_number}}" class="btn btn-primary">Buy now</a>
+            </div>
+            <div class="col">
+              <h5>Price : {{product.product_price}}</h5>
+            </div>
+          </div>
+
       </div>
 
     </div></div>
