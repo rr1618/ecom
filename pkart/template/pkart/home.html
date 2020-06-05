@@ -29,10 +29,10 @@
   <h2>Welcome {{user}}</h2>
 </div>
 {% endif %}
-<div  class="col-9 mx-auto my-5">
-  <div class="row">
+<div  class="col-12 mx-auto my-5">
+  <div class="row mx-auto">
     {% for product in products %}
-    <div class='col-3'><div class="card">
+    <div class='col-3 mx-auto'><div class="card">
       <div class="card-header">
         Product {{product.product_number}}
       </div>
@@ -42,9 +42,6 @@
 
             <p id = "rl{{product.product_number}}" class="card-text" onclick="expand({{product.product_number}})" style="cursor:pointer">{{product.product_description}}</p>
             <span class="text-secondary" id = "sl{{product.product_number}}"onclick="contract({{product.product_number}})" style="display: none;cursor:pointer">show less</span>
-
-
-
         <a href="/pkart/checkout/{{product.product_number}}" class="btn btn-primary">Buy now</a>
       </div>
 
